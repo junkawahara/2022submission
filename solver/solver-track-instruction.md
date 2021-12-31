@@ -2,8 +2,8 @@
 
 ## About output (solution) files
 
-- Output files shuld be the concatenation of [Output File Format](https://core-challenge.github.io/2022/#output-file-format) and a verbose "GNU time" command log.
-  - **Do not use the default "time" command which does not have verbose options.**
+- Output files shuld be the concatenation of [Output File Format](https://core-challenge.github.io/2022/#output-file-format) and a **verbose "GNU time" command log**.
+  - **Do not use** the default "time" command which does not have verbose options.
   - (macOS) install "GNU time"  by `brew install gnu-time` for instance. It can be called by `gtime`.
   - (ubuntu) install "GNU time" by `apt install time` for instance. It can be called by `/usr/bin/time`.
 - An example of acceptable submissions is as follows (executed on macOS).
@@ -56,15 +56,17 @@ a 3 4 6
 
 - You may wonder how to put "GNU time" results into a file. There are several options
   - `-o <file>` option puts the result into `<file>`
-  - By using curly braces, you can redirect the results. For instance, `{ gtime -v SOLVER_CMD test.col test.dat > example.txt ; } 2>> example.txt` will put all outputs to `<example.txt>`.
+  - By using curly braces, you can redirect the results. 
+    - For instance, `{ gtime -v SOLVER_CMD test.col test.dat > example.txt ; } 2>> example.txt` will put all outputs to `<example.txt>`.
 
 ## About solver (as a docker container)
 
 - Please submit your solver executable on Ubuntu 20.04 as a docker container archive (tar.gz archive).
 
-### Instruction
 
-At first, edit Dockerfile as you like (cloning 2022solver is mandatory). 
+### Dockerfile and final product
+
+- The basic template is as follows.
 
 ``` bash
 FROM ubuntu:20.04
@@ -87,7 +89,15 @@ RUN \
 RUN git clone https://github.com/core-challenge/2022solver.git
 ```
 
-Then, build your docker image by the following command. Note that `mysolver` can be any "image name" and `v01` can be any "tag name".
+- It will create an almost empty Ubuntu OS which has the `/2022solver/` directory.
+- What you need to do is install your solver and rewrite `/2022solver/run.sh` so that `/2022solver/run.sh /2022solver/example/hc-toyno-01.col /2022solver/example/hc-toyno-01_01.dat` returns appropriate output.
+- There are several ways to do that. The following is an instruction.
+
+### Instruction
+
+- At first, edit the above Dockerfile as you like (cloning 2022solver is mandatory).
+
+- Then, build your docker image by the following command. Note that `mysolver` can be any "image name" and `v01` can be any "tag name".
 
 ```bash
 docker build -t mysolver:v01 .
@@ -158,7 +168,7 @@ $ docker export mysolver-container | gzip -c > mysolver-container.tar.gz
 
 - Please add `mysolver-container.tar.gz` to your repository at your submission. 
 
-### Cheet sheet
+### Docker command reference
 
 - The official reference of Docker CLI is [here](https://docs.docker.com/engine/reference/run/).
 - The followings are frequently used commands.
