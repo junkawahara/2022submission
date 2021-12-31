@@ -1,6 +1,6 @@
 # README: Submission
 
-## solver track
+## Solver track
 
 - Please prepare the followings:
   - [Example output](https://core-challenge.github.io/2022/#output-file-format) and "GNU time" command log.
@@ -14,7 +14,7 @@
 
 - Submission should be done by the procedure described [here](https://core-challenge.github.io/2022/#for-solver-track). (clone this repository and add TakehideSoh in your private repository).
 
-## graph track
+## Graph track
 
 - Please prepare the followings:
   - [ISR instance (input)](https://core-challenge.github.io/2022/#input-file-format)
