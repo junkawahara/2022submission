@@ -1,0 +1,39 @@
+c 0 GraphFile:/Users/soh/02_prog/2022benchmark/benchmark/handcrafted/hc-toyyes-01.col
+c 0 InstanceFile:/Users/soh/02_prog/2022benchmark/benchmark/handcrafted/hc-toyyes-01_01.dat
+c 0 #Node:7, #Edge:7, #Init:3, InitRatio:0.43, #Goal:3, GoalRatio:0.43
+c 0 SatSolver: Sat4j(default)
+c 0 IsrSolver: tj02
+c step 1
+c step 2
+c step 3
+a Yes
+a 3 6 7
+c 3 -> 1
+a 1 6 7
+c 6 -> 5
+a 1 5 7
+c 1 -> 4
+a 4 5 7
+	Command being timed: "/Users/soh/app/scala-2.12.4/bin/scala -cp jar/scop.jar:jar/coresolver_2.12-1.3.5.jar fun.scop.app.isr.IsrSolver -isrsolver tj02 /Users/soh/02_prog/2022benchmark/benchmark/handcrafted/hc-toyyes-01.col /Users/soh/02_prog/2022benchmark/benchmark/handcrafted/hc-toyyes-01_01.dat"
+	User time (seconds): 2.01
+	System time (seconds): 0.18
+	Percent of CPU this job got: 230%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.95
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 108776
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 34317
+	Voluntary context switches: 16
+	Involuntary context switches: 18559
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 5
+	Page size (bytes): 4096
+	Exit status: 0
