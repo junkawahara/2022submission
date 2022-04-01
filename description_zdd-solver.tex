@@ -1,0 +1,54 @@
+% Created 2019-06-27 木 15:54
+% Intended LaTeX compiler: pdflatex
+\documentclass{article}
+
+\usepackage{authblk}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{url}
+
+\date{}
+\title{A decision diagram-based solver for the independent set reconfiguration problem}
+\pagenumbering{gobble}
+
+\author[1]{Jun Kawahara}
+\author[1]{Hiroki Yamazaki}
+%\author[1]{zzz}
+\affil[1]{Kyoto University}
+
+\begin{document}
+\maketitle
+
+\section{Engine: Core Solver or Algorithm}
+Our solver is based on zero-suppressed binary decision diagrams~\cite{Minato93} and the graphillion library~\cite{Inoue2016}.
+%xxx yyy zzz
+%\begin{itemize}
+%\item xxx
+%\item yyy
+%\item zzz
+%\end{itemize}
+
+%\section{Computation Environment}
+%\begin{itemize}
+%\item CPU: xxx
+%\item MEM: yyy
+%\item zzz etc
+%\end{itemize}
+
+\begin{thebibliography}{99}
+\bibitem{Minato93}
+S.~Minato.
+\newblock Zero-suppressed {BDD}s for set manipulation in combinatorial
+  problems.
+\newblock In {\em the 30th ACM/IEEE design automation conference}, pages
+  272--277, 1993.
+\newblock \url {https://doi.org/10.1145/157485.164890}
+
+\bibitem{Inoue2016}
+T.~Inoue, H.~Iwashita, J.~Kawahara, S.~Minato, Graphillion: software library
+  for very large sets of labeled graphs, International Journal on Software
+  Tools for Technology Transfer 18~(1) 57--66, 2016.
+\newblock \url {https://doi.org/10.1007/s10009-014-0352-z}
+  
+\end{thebibliography}
+
+\end{document}

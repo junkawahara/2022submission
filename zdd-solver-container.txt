@@ -1,0 +1,4 @@
+Our container is located at
+https://www.algo.cce.i.kyoto-u.ac.jp/jkawahara/tmp/zdd-solver-container.tar.gz
+because the size of the file (242MB) exceeds the limitation of GitHub (100MB).
+Its sha1sum is bd85080d85b1e87873daf445e0fbf0b9b735d4cf .
